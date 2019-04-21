@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>/interact.js-master/packages/pointer-events/PointerEvent.ts - Documentation</title>
+
+    <script src="/api/scripts/prettify/prettify.js"></script>
+    <script src="/api/scripts/prettify/lang-css.js"></script>
+    <script src="/javascripts/api/index.bundle.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="/api/styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="/api/styles/jsdoc-default.css">
+    <link href="/stylesheets/main.css" rel="stylesheet" />
+    <link href="/stylesheets/adv.css" rel="stylesheet" />
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+<a href="/">    <img src="/images/ijs.svg" class="logo" alt="interact.js" title="Homepage" />
+</a>
+  <a class="tags has-addons is-inline-flex" href="https://www.npmjs.com/package/interactjs/v/1.4.0-rc.13">
+  <span class="tag is-light">version</span>
+  <span class="tag is-warning">
+    1.4.0-rc.13
+  </span>
+</a>
+
+
+  <li class="nav-link nav-home-link"><a href="/api/index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="/api/DropEvent.html">DropEvent</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/DropEvent.html#reject">reject</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="/api/Interactable.html">Interactable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#context">context</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#deltaSource">deltaSource</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#draggable">draggable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#dropCheck">dropCheck</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#dropzone">dropzone</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#fire">fire</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#gesturable">gesturable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#getRect">getRect</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#off">off</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#on">on</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#origin">origin</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#rectChecker">rectChecker</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#reflow">reflow</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#resizable">resizable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#set">set</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/Interactable.html#unset">unset</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="/api/InteractEvent_InteractEvent.html">InteractEvent</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="/api/module.exports.html">exports</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="/api/module-interact.html">interact</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/module-interact.html#.maxInteractions">maxInteractions</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="/api/module-modifiers_snapEdges.html">modifiers/snapEdges</a></span></li><li class="nav-heading"><a href="/api/global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="/api/global.html#interact">interact</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/global.html#preventDefault">preventDefault</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/global.html#stopImmediatePropagation">stopImmediatePropagation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="/api/global.html#stopPropagation">stopPropagation</a></span></li>
+
+</nav>
+
+<div class="code-col-bg">
+</div>
+
+<main id="main">
+  <section class="is-paddingless">
+    <div class="navbar is-dark is-hidden-mobile" role="navigation" aria-label="navigation">
+      <div class="navbar-end is-flex">
+        <div class="navbar-item is-paddingless has-dropdown is-hoverable is-mobile">
+
+
+    <div class="navbar-link">
+      <img src="/images/doc.svg" class="is-hidden-mobile white-icon" alt="Guide" />
+
+      Guide
+    </div>
+
+    <div class="navbar-dropdown" aria-label="dropdown">
+      <a href="/docs/" class="navbar-item">
+        Intro
+      </a>
+      <a href="/docs/draggable" class="navbar-item">
+        Draggable
+      </a>
+      <a href="/docs/resizable" class="navbar-item">
+        resizable
+      </a>
+      <a href="/docs/gesturable" class="navbar-item">
+        Gesturable
+      </a>
+      <a href="/docs/dropzone" class="navbar-item">
+        Dropzone
+      </a>
+      <a href="/docs/action_options" class="navbar-item">
+        Action Options
+      </a>
+      <a href="/docs/events" class="navbar-item">
+        Events
+      </a>
+      <a href="/docs/modifiers" class="navbar-item">
+        Modifiers
+      </a>
+      <a href="/docs/snapping" class="navbar-item">
+        Snapping
+      </a>
+      <a href="/docs/restriction" class="navbar-item">
+        Restriction
+      </a>
+      <a href="/docs/inertia" class="navbar-item">
+        Inertia
+      </a>
+      <a href="/docs/reflow" class="navbar-item">
+        Reflow
+      </a>
+      <a href="/docs/faq" class="navbar-item">
+        FAQ
+      </a>
+      <a href="/api" class="navbar-item">
+        API
+      </a>
+    </div>
+
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://github.com/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/code.svg" class="is-hidden-mobile white-icon" alt="Code" />
+
+    &nbsp;Source
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://gitter.im/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/chat.svg" class="is-hidden-mobile white-icon" alt="Gitter" />
+
+    Chat
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://twitter.com/interactjs" class="navbar-link is-arrowless">
+      <img src="/images/bird.svg" class="is-hidden-mobile white-icon" alt="Bird" />
+
+    @interactjs
+  </a>
+
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <h1 class="page-title">/interact.js-master/packages/pointer-events/PointerEvent.ts</h1>
+  
+
+  
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Interaction from '@interactjs/core/Interaction'
+import pointerUtils from '@interactjs/utils/pointerUtils'
+
+/** */
+export default class PointerEvent&lt;T extends string> {
+  interaction: Interaction
+  timeStamp: number
+  originalEvent: Interact.PointerEventType
+  type: T
+  pointerId: number
+  pointerType: string
+  target: Node | Window
+  currentTarget: Node | Window
+  double: boolean
+  pageX: number
+  pageY: number
+  clientX: number
+  clientY: number
+  dt: number
+  eventable: any
+  propagationStopped = false
+  immediatePropagationStopped = false
+
+  /** */
+  constructor (
+    type: T,
+    pointer: Interact.PointerType | PointerEvent&lt;any>,
+    event: Interact.PointerEventType,
+    eventTarget: Interact.EventTarget,
+    interaction: Interact.Interaction,
+    timeStamp: number,
+  ) {
+    pointerUtils.pointerExtend(this, event)
+
+    if (event !== pointer) {
+      pointerUtils.pointerExtend(this, pointer)
+    }
+
+    this.interaction = interaction
+
+    this.timeStamp     = timeStamp
+    this.originalEvent = event
+    this.type          = type
+    this.pointerId     = pointerUtils.getPointerId(pointer)
+    this.pointerType   = pointerUtils.getPointerType(pointer)
+    this.target        = eventTarget
+    this.currentTarget = null
+
+    if (type === 'tap') {
+      const pointerIndex = interaction.getPointerIndex(pointer)
+      this.dt = this.timeStamp - interaction.pointers[pointerIndex].downTime
+
+      const interval = this.timeStamp - interaction.tapTime
+
+      this.double = !!(interaction.prevTap &amp;&amp;
+        interaction.prevTap.type !== 'doubletap' &amp;&amp;
+        interaction.prevTap.target === this.target &amp;&amp;
+        interval &lt; 500)
+    }
+    else if (type === 'doubletap') {
+      this.dt = (pointer as PointerEvent&lt;'tap'>).timeStamp - interaction.tapTime
+    }
+  }
+
+  subtractOrigin ({ x: originX, y: originY }) {
+    this.pageX   -= originX
+    this.pageY   -= originY
+    this.clientX -= originX
+    this.clientY -= originY
+
+    return this
+  }
+
+  addOrigin ({ x: originX, y: originY }) {
+    this.pageX   += originX
+    this.pageY   += originY
+    this.clientX += originX
+    this.clientY += originY
+
+    return this
+  }
+
+  /**
+   * Prevent the default behaviour of the original Event
+   */
+  preventDefault () {
+    this.originalEvent.preventDefault()
+  }
+
+  /**
+   * Don't call listeners on the remaining targets
+   */
+  stopPropagation () {
+    this.propagationStopped = true
+  }
+
+  /**
+   * Don't call any other listeners (even on the current target)
+   */
+  stopImmediatePropagation () {
+    this.immediatePropagationStopped = this.propagationStopped = true
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+  <div class="ad-padding"></div>
+</main>
+
+<div class="ad-wrap code-col-bg">
+  <div id="ad-contain">
+    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIK2J7&placement=interactjsio" id="_carbonads_js"></script>
+ </div>
+</div>
+
+<script>prettyPrint();</script>
+<script src="/api/scripts/linenumber.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+
+
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Taye Adeyemi" />
+    <title>interact.js API Documentation</title>
+
+    <link href="/images/ijs-gray-blue-64.png" rel="icon" type="image/png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site:id" content="2238211567" />
+    <meta name="twitter:creator:id" content="1173430910" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="interact.js API Documentation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://interactjs.io/images/screenshot_half_size.png" />
+    <meta property="og:description" name="description"
+      content="interact.js is a standalone javascript module for handling
+               single-pointer and multi-touch drags and gestures with powerful
+               options such as inertia and snapping" />
+
+    <link href="/stylesheets/slate_screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/slate_print.css" rel="stylesheet" media="print" />
+    <link href="/stylesheets/syntax.css" rel="stylesheet" media="screen" />
+
+    <link href="/stylesheets/adv.css" rel="stylesheet" media="all" />
+    <link href="/stylesheets/docs.css" rel="stylesheet" media="all" />
+
+    <script src="/javascripts/slate/index.bundle.js"></script>
+
+  </head>
+
+  <body class="docs docs_guide docs_guide_draggable">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="/images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+<a href="/">        <img src="/images/ijs.svg" class="logo" alt="interact.js" title="Homepage" />
+</a>
+      <div class="has-text-centered">
+        <a class="tags has-addons is-inline-flex" href="https://www.npmjs.com/package/interactjs/v/1.4.0-rc.13">
+  <span class="tag is-light">version</span>
+  <span class="tag is-warning">
+    1.4.0-rc.13
+  </span>
+</a>
+
+      </div>
+
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+
+      <div id="toc">
+      </div>
+
+      <br class="is-hidden-tablet">
+
+      <nav class="navbar is-hidden-tablet" role="navigation" aria-label="navigation">
+        <div class="navbar-end">
+            <div class="navbar-item is-paddingless has-dropdown is-hoverable">
+
+
+    <div class="navbar-link">
+      <img src="/images/doc.svg" class="is-hidden-mobile white-icon" alt="Guide" />
+
+      Guide
+    </div>
+
+    <div class="navbar-dropdown" aria-label="dropdown">
+      <a href="/docs/" class="navbar-item">
+        Intro
+      </a>
+      <a href="/docs/draggable" class="navbar-item">
+        Draggable
+      </a>
+      <a href="/docs/resizable" class="navbar-item">
+        resizable
+      </a>
+      <a href="/docs/gesturable" class="navbar-item">
+        Gesturable
+      </a>
+      <a href="/docs/dropzone" class="navbar-item">
+        Dropzone
+      </a>
+      <a href="/docs/action_options" class="navbar-item">
+        Action Options
+      </a>
+      <a href="/docs/events" class="navbar-item">
+        Events
+      </a>
+      <a href="/docs/modifiers" class="navbar-item">
+        Modifiers
+      </a>
+      <a href="/docs/snapping" class="navbar-item">
+        Snapping
+      </a>
+      <a href="/docs/restriction" class="navbar-item">
+        Restriction
+      </a>
+      <a href="/docs/inertia" class="navbar-item">
+        Inertia
+      </a>
+      <a href="/docs/reflow" class="navbar-item">
+        Reflow
+      </a>
+      <a href="/docs/faq" class="navbar-item">
+        FAQ
+      </a>
+      <a href="/api" class="navbar-item">
+        API
+      </a>
+    </div>
+
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://github.com/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/code.svg" class="is-hidden-mobile white-icon" alt="Code" />
+
+    &nbsp;Source
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://gitter.im/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/chat.svg" class="is-hidden-mobile white-icon" alt="Gitter" />
+
+    Chat
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://twitter.com/interactjs" class="navbar-link is-arrowless">
+      <img src="/images/bird.svg" class="is-hidden-mobile white-icon" alt="Bird" />
+
+    @interactjs
+  </a>
+
+</div>
+
+        </div>
+      </nav>
+
+        <ul class="toc-footer">
+            <li><a href='http://github.com/tripit/slate'>(Docs Powered by Slate)</a></li>
+        </ul>
+
+    </div>
+    <div class="page-wrapper">
+        <nav class="navbar is-dark is-hidden-mobile" role="navigation" aria-label="navigation">
+          <div class="navbar-end is-flex">
+            <div class="navbar-item is-paddingless has-dropdown is-hoverable is-mobile">
+
+
+    <div class="navbar-link">
+      <img src="/images/doc.svg" class="is-hidden-mobile white-icon" alt="Guide" />
+
+      Guide
+    </div>
+
+    <div class="navbar-dropdown" aria-label="dropdown">
+      <a href="/docs/" class="navbar-item">
+        Intro
+      </a>
+      <a href="/docs/draggable" class="navbar-item">
+        Draggable
+      </a>
+      <a href="/docs/resizable" class="navbar-item">
+        resizable
+      </a>
+      <a href="/docs/gesturable" class="navbar-item">
+        Gesturable
+      </a>
+      <a href="/docs/dropzone" class="navbar-item">
+        Dropzone
+      </a>
+      <a href="/docs/action_options" class="navbar-item">
+        Action Options
+      </a>
+      <a href="/docs/events" class="navbar-item">
+        Events
+      </a>
+      <a href="/docs/modifiers" class="navbar-item">
+        Modifiers
+      </a>
+      <a href="/docs/snapping" class="navbar-item">
+        Snapping
+      </a>
+      <a href="/docs/restriction" class="navbar-item">
+        Restriction
+      </a>
+      <a href="/docs/inertia" class="navbar-item">
+        Inertia
+      </a>
+      <a href="/docs/reflow" class="navbar-item">
+        Reflow
+      </a>
+      <a href="/docs/faq" class="navbar-item">
+        FAQ
+      </a>
+      <a href="/api" class="navbar-item">
+        API
+      </a>
+    </div>
+
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://github.com/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/code.svg" class="is-hidden-mobile white-icon" alt="Code" />
+
+    &nbsp;Source
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://gitter.im/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/chat.svg" class="is-hidden-mobile white-icon" alt="Gitter" />
+
+    Chat
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://twitter.com/interactjs" class="navbar-link is-arrowless">
+      <img src="/images/bird.svg" class="is-hidden-mobile white-icon" alt="Bird" />
+
+    @interactjs
+  </a>
+
+</div>
+
+          </div>
+        </nav>
+
+      <div class="dark-box">
+
+        <div class="ad-wrap">
+          <div id="ad-contain">
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIK2J7&placement=interactjsio" id="_carbonads_js"></script>
+          </div>
+        </div>
+
+      </div>
+
+      <main class="docs-content">
+        <h1 id='draggable'>Draggable</h1><div class="highlight"><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"draggable"</span><span class="nt">&gt;</span> Draggable Element <span class="nt">&lt;/div&gt;</span>
+</code></pre></div><div class="highlight"><pre class="highlight css"><code><span class="nc">.draggable</span> <span class="p">{</span>
+  <span class="py">touch-action</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="py">user-select</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">position</span> <span class="o">=</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span>
+
+<span class="nx">interact</span><span class="p">(</span><span class="s1">'.draggable'</span><span class="p">).</span><span class="nx">draggable</span><span class="p">({</span>
+  <span class="na">listeners</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">start</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="nx">move</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">dx</span>
+      <span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">dy</span>
+
+      <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">transform</span> <span class="o">=</span>
+        <span class="s2">`transform(</span><span class="p">${</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">}</span><span class="s2">, </span><span class="p">${</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">}</span><span class="s2">)`</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+<p>Dragging is the simplest action interactj.s provides. To make an element
+draggable, create an interactable with your desired target then call the
+<code class="prettyprint">draggable</code> method with the options that you need. In adition to the common
+<code class="prettyprint">InteractEvent</code> properties, <code class="prettyprint">dragmove</code> events also have:</p>
+
+<table><thead>
+<tr>
+<th><code class="prettyprint">dragmove</code> property</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">dragEnter</code></td>
+<td>The dropzone this Interactable was dragged over</td>
+</tr>
+<tr>
+<td><code class="prettyprint">dragLeave</code></td>
+<td>The dropzone this Interactable was dragged out of</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Remember to use CSS `touch-action: none` to prevent the browser from panning
+when the user drags with a touch pointer, and `user-select: none` to disable
+text selection.
+</aside>
+<h2 id='code-classprettyprintlockaxiscode-and-code-classprettyprintstartaxiscode'><code class="prettyprint">lockAxis</code> and <code class="prettyprint">startAxis</code></h2><div class="highlight"><pre class="highlight javascript"><code><span class="c1">// lock the drag to the starting direction</span>
+<span class="nx">interact</span><span class="p">(</span><span class="nx">singleAxisTarget</span><span class="p">).</span><span class="nx">draggable</span><span class="p">({</span>
+  <span class="na">startAxis</span><span class="p">:</span> <span class="s1">'xy'</span>
+  <span class="na">lockAxis</span><span class="p">:</span> <span class="s1">'start'</span>
+<span class="p">});</span>
+
+<span class="c1">// only drag if the drag was started horizontally</span>
+<span class="nx">interact</span><span class="p">(</span><span class="nx">horizontalTarget</span><span class="p">).</span><span class="nx">draggable</span><span class="p">({</span>
+  <span class="na">startAxis</span><span class="p">:</span> <span class="s1">'x'</span>
+  <span class="na">lockAxis</span><span class="p">:</span> <span class="s1">'x'</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>There are two options for controlling the axis of drag actions: <code class="prettyprint">startAxis</code> and
+<code class="prettyprint">lockAxis</code>.</p>
+
+<p><code class="prettyprint">startAxis</code> sets the direction that the initial movement must be in for the
+action to start. Use <code class="prettyprint">&#39;x&#39;</code> to require the user to start dragging horizontally or
+<code class="prettyprint">&#39;y&#39;</code> to start dragging vertically.</p>
+
+<p><code class="prettyprint">lockAxis</code> causes the drag events to change only in the given axis. If a value
+of <code class="prettyprint">&#39;start&#39;</code> is used, then the drag will be locked to the starting direction.</p>
+
+
+        <div class="ad-padding"></div>
+
+      </main>
+    </div>
+
+    <script>
+      if (!/yes|1/.test(navigator.doNotTrack) || /MSIE|Trident/i.test(navigator.userAgent)) {
+      (function(p,r,i,v,a,c,y){p['GoogleAnalyticsObject']=a;p[a]=p[a]||function(){
+      (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
+      y=r.getElementsByTagName(i)[0];c.async=1;c.src=v;y.parentNode.insertBefore(c,y)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-44445883-3', 'interactjs.io');
+
+      window.addEventListener('DOMContentLoaded', function () {
+        var heading = document.getElementById(window.location.hash),
+            title = heading && heading.textContent;
+
+        if (title) {
+          ga('send', {
+            hitType: 'pageview',
+            page: '/docs/' + window.location.hash,
+            title: 'Docs: ' + title
+          });
+        }
+        else {
+          ga('send', 'pageview');
+        }
+      });
+    }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,396 @@
+
+
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Taye Adeyemi" />
+    <title>resizable | interact.js Docs</title>
+
+    <link href="/images/ijs-gray-blue-64.png" rel="icon" type="image/png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site:id" content="2238211567" />
+    <meta name="twitter:creator:id" content="1173430910" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="resizable | interact.js Docs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://interactjs.io/images/screenshot_half_size.png" />
+    <meta property="og:description" name="description"
+      content="interact.js is a standalone javascript module for handling
+               single-pointer and multi-touch drags and gestures with powerful
+               options such as inertia and snapping" />
+
+    <link href="/stylesheets/slate_screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/slate_print.css" rel="stylesheet" media="print" />
+    <link href="/stylesheets/syntax.css" rel="stylesheet" media="screen" />
+
+    <link href="/stylesheets/adv.css" rel="stylesheet" media="all" />
+    <link href="/stylesheets/docs.css" rel="stylesheet" media="all" />
+
+    <script src="/javascripts/slate/index.bundle.js"></script>
+
+  </head>
+
+  <body class="docs docs_resizable docs_resizable_index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="/images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+<a href="/">        <img src="/images/ijs.svg" class="logo" alt="interact.js" title="Homepage" />
+</a>
+      <div class="has-text-centered">
+        <a class="tags has-addons is-inline-flex" href="https://www.npmjs.com/package/interactjs/v/1.4.0-rc.13">
+  <span class="tag is-light">version</span>
+  <span class="tag is-warning">
+    1.4.0-rc.13
+  </span>
+</a>
+
+      </div>
+
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+
+      <div id="toc">
+      </div>
+
+      <br class="is-hidden-tablet">
+
+      <nav class="navbar is-hidden-tablet" role="navigation" aria-label="navigation">
+        <div class="navbar-end">
+            <div class="navbar-item is-paddingless has-dropdown is-hoverable">
+
+
+    <div class="navbar-link">
+      <img src="/images/doc.svg" class="is-hidden-mobile white-icon" alt="Guide" />
+
+      Guide
+    </div>
+
+    <div class="navbar-dropdown" aria-label="dropdown">
+      <a href="/docs/" class="navbar-item">
+        Intro
+      </a>
+      <a href="/docs/draggable" class="navbar-item">
+        Draggable
+      </a>
+      <a href="/docs/resizable" class="navbar-item">
+        resizable
+      </a>
+      <a href="/docs/gesturable" class="navbar-item">
+        Gesturable
+      </a>
+      <a href="/docs/dropzone" class="navbar-item">
+        Dropzone
+      </a>
+      <a href="/docs/action_options" class="navbar-item">
+        Action Options
+      </a>
+      <a href="/docs/events" class="navbar-item">
+        Events
+      </a>
+      <a href="/docs/modifiers" class="navbar-item">
+        Modifiers
+      </a>
+      <a href="/docs/snapping" class="navbar-item">
+        Snapping
+      </a>
+      <a href="/docs/restriction" class="navbar-item">
+        Restriction
+      </a>
+      <a href="/docs/inertia" class="navbar-item">
+        Inertia
+      </a>
+      <a href="/docs/reflow" class="navbar-item">
+        Reflow
+      </a>
+      <a href="/docs/faq" class="navbar-item">
+        FAQ
+      </a>
+      <a href="/api" class="navbar-item">
+        API
+      </a>
+    </div>
+
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://github.com/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/code.svg" class="is-hidden-mobile white-icon" alt="Code" />
+
+    &nbsp;Source
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://gitter.im/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/chat.svg" class="is-hidden-mobile white-icon" alt="Gitter" />
+
+    Chat
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://twitter.com/interactjs" class="navbar-link is-arrowless">
+      <img src="/images/bird.svg" class="is-hidden-mobile white-icon" alt="Bird" />
+
+    @interactjs
+  </a>
+
+</div>
+
+        </div>
+      </nav>
+
+        <ul class="toc-footer">
+            <li><a href='http://github.com/tripit/slate'>(Docs Powered by Slate)</a></li>
+        </ul>
+
+    </div>
+    <div class="page-wrapper">
+        <nav class="navbar is-dark is-hidden-mobile" role="navigation" aria-label="navigation">
+          <div class="navbar-end is-flex">
+            <div class="navbar-item is-paddingless has-dropdown is-hoverable is-mobile">
+
+
+    <div class="navbar-link">
+      <img src="/images/doc.svg" class="is-hidden-mobile white-icon" alt="Guide" />
+
+      Guide
+    </div>
+
+    <div class="navbar-dropdown" aria-label="dropdown">
+      <a href="/docs/" class="navbar-item">
+        Intro
+      </a>
+      <a href="/docs/draggable" class="navbar-item">
+        Draggable
+      </a>
+      <a href="/docs/resizable" class="navbar-item">
+        resizable
+      </a>
+      <a href="/docs/gesturable" class="navbar-item">
+        Gesturable
+      </a>
+      <a href="/docs/dropzone" class="navbar-item">
+        Dropzone
+      </a>
+      <a href="/docs/action_options" class="navbar-item">
+        Action Options
+      </a>
+      <a href="/docs/events" class="navbar-item">
+        Events
+      </a>
+      <a href="/docs/modifiers" class="navbar-item">
+        Modifiers
+      </a>
+      <a href="/docs/snapping" class="navbar-item">
+        Snapping
+      </a>
+      <a href="/docs/restriction" class="navbar-item">
+        Restriction
+      </a>
+      <a href="/docs/inertia" class="navbar-item">
+        Inertia
+      </a>
+      <a href="/docs/reflow" class="navbar-item">
+        Reflow
+      </a>
+      <a href="/docs/faq" class="navbar-item">
+        FAQ
+      </a>
+      <a href="/api" class="navbar-item">
+        API
+      </a>
+    </div>
+
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://github.com/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/code.svg" class="is-hidden-mobile white-icon" alt="Code" />
+
+    &nbsp;Source
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://gitter.im/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/chat.svg" class="is-hidden-mobile white-icon" alt="Gitter" />
+
+    Chat
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://twitter.com/interactjs" class="navbar-link is-arrowless">
+      <img src="/images/bird.svg" class="is-hidden-mobile white-icon" alt="Bird" />
+
+    @interactjs
+  </a>
+
+</div>
+
+          </div>
+        </nav>
+
+      <div class="dark-box">
+
+        <div class="ad-wrap">
+          <div id="ad-contain">
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIK2J7&placement=interactjsio" id="_carbonads_js"></script>
+          </div>
+        </div>
+
+      </div>
+
+      <main class="docs-content">
+        <h1 id='resizable'>Resizable</h1><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">resizable</span><span class="p">({</span>
+    <span class="na">edges</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">top</span>   <span class="p">:</span> <span class="kc">true</span><span class="p">,</span>       <span class="c1">// Use pointer coords to check for resize.</span>
+      <span class="na">left</span>  <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>      <span class="c1">// Disable resizing from left edge.</span>
+      <span class="na">bottom</span><span class="p">:</span> <span class="s1">'.resize-s'</span><span class="p">,</span><span class="c1">// Resize if pointer target matches selector</span>
+      <span class="na">right</span> <span class="p">:</span> <span class="nx">handleEl</span>    <span class="c1">// Resize if pointer target is the given Element</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+</code></pre></div>
+<p>Resize events have <code class="prettyprint">rect</code> and <code class="prettyprint">deltaRect</code> properties. <code class="prettyprint">rect</code> is updated on each
+<code class="prettyprint">resizemove</code> event and the values in <code class="prettyprint">deltaRect</code> reflect the changes. In
+<code class="prettyprint">resizestart</code>, <code class="prettyprint">rect</code> will be identical to the rect returned by
+<code class="prettyprint">interactable.getRect(element)</code> and <code class="prettyprint">deltaRect</code> will have all-zero properties.</p>
+
+<table><thead>
+<tr>
+<th>Resize Event property</th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">edges</code></td>
+<td>The edges of the element that are being changed</td>
+</tr>
+<tr>
+<td><code class="prettyprint">rect</code></td>
+<td>An object with the new dimensions of the target</td>
+</tr>
+<tr>
+<td><code class="prettyprint">deltaRect</code></td>
+<td>The change in dimensions since the previous event</td>
+</tr>
+</tbody></table>
+
+<p>Resizable options have an <code class="prettyprint">edges</code> property which specifies the edges of the
+element which can be resized from (top, left, bottom or right).</p>
+
+<aside class="notice">
+Remember to use CSS `touch-action: none` to prevent the browser from panning
+when the user drags with a touch pointer, and `user-select: none` to disable
+text selection.
+</aside>
+<div class="highlight"><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">data-x=</span><span class="s">0</span> <span class="na">data-y=</span><span class="s">0</span> <span class="na">class=</span><span class="s">"resizable"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- top-left resize handle --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"resize-top resize-left"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- bottom-right resize handle --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"resize-bottom resize-right"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="s1">'.resizable'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">resizable</span><span class="p">({</span>
+    <span class="na">edges</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">top</span>   <span class="p">:</span> <span class="s1">'.resize-top'</span><span class="p">,</span>
+      <span class="na">left</span>  <span class="p">:</span> <span class="s1">'.resize-left'</span><span class="p">,</span>
+      <span class="na">bottom</span><span class="p">:</span> <span class="s1">'.resize-bottom'</span><span class="p">,</span>
+      <span class="na">right</span> <span class="p">:</span> <span class="s1">'.resize-right'</span>
+    <span class="p">},</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'resizemove'</span><span class="p">,</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="p">{</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">dataset</span>
+
+    <span class="nx">x</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span>
+    <span class="nx">y</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span>
+
+    <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">style</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">rect</span><span class="p">.</span><span class="nx">width</span><span class="p">}</span><span class="s2">px`</span><span class="p">,</span>
+      <span class="na">height</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">rect</span><span class="p">.</span><span class="nx">height</span><span class="p">}</span><span class="s2">px`</span><span class="p">,</span>
+      <span class="na">transform</span><span class="p">:</span> <span class="s2">`translate(</span><span class="p">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">deltaRect</span><span class="p">.</span><span class="nx">left</span><span class="p">}</span><span class="s2">px, </span><span class="p">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">deltaRect</span><span class="p">.</span><span class="nx">top</span><span class="p">}</span><span class="s2">px)`</span>
+    <span class="p">})</span>
+
+    <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">dataset</span><span class="p">,</span> <span class="p">{</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="p">})</span>
+  <span class="p">})</span>
+</code></pre></div>
+<p>If you&rsquo;d like an element to behave as a resize corner, let it match the
+selectors of two adjacent edges.</p>
+
+<p>Resize handle elements must be children of the resizable element. If you need
+the handles to be outside the target element, then you will need to use
+<a href="interaction-start"><code class="prettyprint">Interaction#start</code></a>.</p>
+<h2 id='code-classprettyprintinvertcode'><code class="prettyprint">invert</code></h2><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="nx">target</span><span class="p">).</span><span class="nx">resizable</span><span class="p">({</span>
+  <span class="na">edges</span><span class="p">:</span> <span class="p">{</span> <span class="na">bottom</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">right</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+  <span class="na">invert</span><span class="p">:</span> <span class="s1">'reposition'</span>
+<span class="p">})</span>
+</code></pre></div>
+<p>By default, resize actions can&rsquo;t make the <code class="prettyprint">event.rect</code> smaller than <code class="prettyprint">0x0</code>. Use
+the <code class="prettyprint">invert</code> option to specify what should happen if the target would be resized
+to dimensions less than <code class="prettyprint">0x0</code>. The possible values are:</p>
+
+<ul>
+<li><code class="prettyprint">&#39;none&#39;</code> (default) will limit the resize rect to a minimum of <code class="prettyprint">0x0</code></li>
+<li><code class="prettyprint">&#39;negate&#39;</code> will allow the rect to have negative width/height</li>
+<li><code class="prettyprint">&#39;reposition&#39;</code> will keep the width/height positive by swapping the top and
+bottom edges and/or swapping the left and right edges</li>
+</ul>
+
+<p><a href="http://codepen.io/taye/pen/LEpmOL">Demo on Codepen</a></p>
+
+
+
+        <div class="ad-padding"></div>
+
+      </main>
+    </div>
+
+    <script>
+      if (!/yes|1/.test(navigator.doNotTrack) || /MSIE|Trident/i.test(navigator.userAgent)) {
+      (function(p,r,i,v,a,c,y){p['GoogleAnalyticsObject']=a;p[a]=p[a]||function(){
+      (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
+      y=r.getElementsByTagName(i)[0];c.async=1;c.src=v;y.parentNode.insertBefore(c,y)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-44445883-3', 'interactjs.io');
+
+      window.addEventListener('DOMContentLoaded', function () {
+        var heading = document.getElementById(window.location.hash),
+            title = heading && heading.textContent;
+
+        if (title) {
+          ga('send', {
+            hitType: 'pageview',
+            page: '/docs/' + window.location.hash,
+            title: 'Docs: ' + title
+          });
+        }
+        else {
+          ga('send', 'pageview');
+        }
+      });
+    }
+    </script>
+
+  </body>
+</html>

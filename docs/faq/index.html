@@ -1,0 +1,402 @@
+
+
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Taye Adeyemi" />
+    <title>Events | interact.js Docs</title>
+
+    <link href="/images/ijs-gray-blue-64.png" rel="icon" type="image/png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site:id" content="2238211567" />
+    <meta name="twitter:creator:id" content="1173430910" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Events | interact.js Docs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://interactjs.io/images/screenshot_half_size.png" />
+    <meta property="og:description" name="description"
+      content="interact.js is a standalone javascript module for handling
+               single-pointer and multi-touch drags and gestures with powerful
+               options such as inertia and snapping" />
+
+    <link href="/stylesheets/slate_screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/slate_print.css" rel="stylesheet" media="print" />
+    <link href="/stylesheets/syntax.css" rel="stylesheet" media="screen" />
+
+    <link href="/stylesheets/adv.css" rel="stylesheet" media="all" />
+    <link href="/stylesheets/docs.css" rel="stylesheet" media="all" />
+
+    <script src="/javascripts/slate/index.bundle.js"></script>
+
+  </head>
+
+  <body class="docs docs_faq docs_faq_index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="/images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+<a href="/">        <img src="/images/ijs.svg" class="logo" alt="interact.js" title="Homepage" />
+</a>
+      <div class="has-text-centered">
+        <a class="tags has-addons is-inline-flex" href="https://www.npmjs.com/package/interactjs/v/1.4.0-rc.13">
+  <span class="tag is-light">version</span>
+  <span class="tag is-warning">
+    1.4.0-rc.13
+  </span>
+</a>
+
+      </div>
+
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+
+      <div id="toc">
+      </div>
+
+      <br class="is-hidden-tablet">
+
+      <nav class="navbar is-hidden-tablet" role="navigation" aria-label="navigation">
+        <div class="navbar-end">
+            <div class="navbar-item is-paddingless has-dropdown is-hoverable">
+
+
+    <div class="navbar-link">
+      <img src="/images/doc.svg" class="is-hidden-mobile white-icon" alt="Guide" />
+
+      Guide
+    </div>
+
+    <div class="navbar-dropdown" aria-label="dropdown">
+      <a href="/docs/" class="navbar-item">
+        Intro
+      </a>
+      <a href="/docs/draggable" class="navbar-item">
+        Draggable
+      </a>
+      <a href="/docs/resizable" class="navbar-item">
+        resizable
+      </a>
+      <a href="/docs/gesturable" class="navbar-item">
+        Gesturable
+      </a>
+      <a href="/docs/dropzone" class="navbar-item">
+        Dropzone
+      </a>
+      <a href="/docs/action_options" class="navbar-item">
+        Action Options
+      </a>
+      <a href="/docs/events" class="navbar-item">
+        Events
+      </a>
+      <a href="/docs/modifiers" class="navbar-item">
+        Modifiers
+      </a>
+      <a href="/docs/snapping" class="navbar-item">
+        Snapping
+      </a>
+      <a href="/docs/restriction" class="navbar-item">
+        Restriction
+      </a>
+      <a href="/docs/inertia" class="navbar-item">
+        Inertia
+      </a>
+      <a href="/docs/reflow" class="navbar-item">
+        Reflow
+      </a>
+      <a href="/docs/faq" class="navbar-item">
+        FAQ
+      </a>
+      <a href="/api" class="navbar-item">
+        API
+      </a>
+    </div>
+
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://github.com/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/code.svg" class="is-hidden-mobile white-icon" alt="Code" />
+
+    &nbsp;Source
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://gitter.im/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/chat.svg" class="is-hidden-mobile white-icon" alt="Gitter" />
+
+    Chat
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless">
+
+  <a href="https://twitter.com/interactjs" class="navbar-link is-arrowless">
+      <img src="/images/bird.svg" class="is-hidden-mobile white-icon" alt="Bird" />
+
+    @interactjs
+  </a>
+
+</div>
+
+        </div>
+      </nav>
+
+        <ul class="toc-footer">
+            <li><a href='http://github.com/tripit/slate'>(Docs Powered by Slate)</a></li>
+        </ul>
+
+    </div>
+    <div class="page-wrapper">
+        <nav class="navbar is-dark is-hidden-mobile" role="navigation" aria-label="navigation">
+          <div class="navbar-end is-flex">
+            <div class="navbar-item is-paddingless has-dropdown is-hoverable is-mobile">
+
+
+    <div class="navbar-link">
+      <img src="/images/doc.svg" class="is-hidden-mobile white-icon" alt="Guide" />
+
+      Guide
+    </div>
+
+    <div class="navbar-dropdown" aria-label="dropdown">
+      <a href="/docs/" class="navbar-item">
+        Intro
+      </a>
+      <a href="/docs/draggable" class="navbar-item">
+        Draggable
+      </a>
+      <a href="/docs/resizable" class="navbar-item">
+        resizable
+      </a>
+      <a href="/docs/gesturable" class="navbar-item">
+        Gesturable
+      </a>
+      <a href="/docs/dropzone" class="navbar-item">
+        Dropzone
+      </a>
+      <a href="/docs/action_options" class="navbar-item">
+        Action Options
+      </a>
+      <a href="/docs/events" class="navbar-item">
+        Events
+      </a>
+      <a href="/docs/modifiers" class="navbar-item">
+        Modifiers
+      </a>
+      <a href="/docs/snapping" class="navbar-item">
+        Snapping
+      </a>
+      <a href="/docs/restriction" class="navbar-item">
+        Restriction
+      </a>
+      <a href="/docs/inertia" class="navbar-item">
+        Inertia
+      </a>
+      <a href="/docs/reflow" class="navbar-item">
+        Reflow
+      </a>
+      <a href="/docs/faq" class="navbar-item">
+        FAQ
+      </a>
+      <a href="/api" class="navbar-item">
+        API
+      </a>
+    </div>
+
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://github.com/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/code.svg" class="is-hidden-mobile white-icon" alt="Code" />
+
+    &nbsp;Source
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://gitter.im/taye/interact.js" class="navbar-link is-arrowless">
+      <img src="/images/chat.svg" class="is-hidden-mobile white-icon" alt="Gitter" />
+
+    Chat
+  </a>
+
+</div>
+  <div class="navbar-item is-paddingless is-mobile">
+
+  <a href="https://twitter.com/interactjs" class="navbar-link is-arrowless">
+      <img src="/images/bird.svg" class="is-hidden-mobile white-icon" alt="Bird" />
+
+    @interactjs
+  </a>
+
+</div>
+
+          </div>
+        </nav>
+
+      <div class="dark-box">
+
+        <div class="ad-wrap">
+          <div id="ad-contain">
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIK2J7&placement=interactjsio" id="_carbonads_js"></script>
+          </div>
+        </div>
+
+      </div>
+
+      <main class="docs-content">
+        <h1 id='faq'>FAQ</h1>
+<p>This page contains questions and issues that are frequently raised on <a href="https://gitter.im/taye/interact.js">Gitter
+chat</a> and <a href="http://git.io/srWhdg">Github issues</a>.</p>
+<h1 id='start-action-after-hold'>Start action after hold</h1>
+<p>Use the <code class="prettyprint">hold</code> option which takes the number of milliseconds that the pointer
+must be held down for.</p>
+<div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">draggable</span><span class="p">({</span>
+    <span class="c1">// start dragging after the pointer is held down for 1 second</span>
+    <span class="na">hold</span><span class="p">:</span> <span class="mi">1000</span>
+  <span class="p">})</span>
+</code></pre></div>
+<p>If you are having problems with default browser behaviour like scrolling,
+context menus, etc. have a look at the
+<a href="/api/Interactable.html#preventDefault"><code class="prettyprint">Interactable#preventDefault</code></a> method and this <a href="https://github.com/taye/interact.js/issues/138">thread on
+Github</a>.</p>
+<h1 id='clone-target-draggable'>Clone target draggable</h1><div class="highlight"><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="s1">'.item'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">draggable</span><span class="p">({</span> <span class="na">manualStart</span><span class="p">:</span> <span class="kc">true</span> <span class="p">})</span>
+  <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'move'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">interaction</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">interaction</span><span class="p">;</span>
+
+    <span class="c1">// if the pointer was moved while being held down</span>
+    <span class="c1">// and an interaction hasn't started yet</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">interaction</span><span class="p">.</span><span class="nx">pointerIsDown</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">interaction</span><span class="p">.</span><span class="nx">interacting</span><span class="p">())</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">original</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">,</span>
+          <span class="c1">// create a clone of the currentTarget element</span>
+          <span class="nx">clone</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+      <span class="c1">// insert the clone to the page</span>
+      <span class="c1">// TODO: position the clone appropriately</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">clone</span><span class="p">);</span>
+
+      <span class="c1">// start a drag interaction targeting the clone</span>
+      <span class="nx">interaction</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span> <span class="na">name</span><span class="p">:</span> <span class="s1">'drag'</span> <span class="p">},</span>
+                        <span class="nx">event</span><span class="p">.</span><span class="nx">interactable</span><span class="p">,</span>
+                        <span class="nx">clone</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+</code></pre></div>
+<p>There&rsquo;s no direct API to drag a clone of the target element. However, you can
+use <a href="/api/Interaction.html#start"><code class="prettyprint">Interaction#start</code></a> to change the target of an
+interaction to any element that you create.</p>
+<h1 id='removedestroyrelease-an-interactable'>Remove/destroy/release an Interactable</h1><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">draggable</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">resizable</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="nx">interact</span><span class="p">.</span><span class="nx">isSet</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>         <span class="c1">// true</span>
+
+<span class="nx">interact</span><span class="p">(</span><span class="nx">target</span><span class="p">).</span><span class="nx">unset</span><span class="p">();</span>
+
+<span class="nx">interact</span><span class="p">.</span><span class="nx">isSet</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>         <span class="c1">// false</span>
+<span class="nx">interact</span><span class="p">(</span><span class="nx">target</span><span class="p">).</span><span class="nx">draggable</span><span class="p">();</span>   <span class="c1">// false</span>
+<span class="nx">interact</span><span class="p">(</span><span class="nx">target</span><span class="p">).</span><span class="nx">resizable</span><span class="p">();</span>   <span class="c1">// false</span>
+</code></pre></div>
+<p>To remove an Interactable, use <code class="prettyprint">interact(target).unset()</code>. That should remove
+all event listeners and make interact.js forget completely about the target.</p>
+<h1 id='changing-dropzones-while-dragging'>Changing dropzones while dragging</h1><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">.</span><span class="nx">dynamicDrop</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</code></pre></div>
+<p>If you&rsquo;re adding/removing dropzone elements or changing their dimensions while
+dragging, you may need to change the <a href="/api/module-interact.html#.dynamicDrop"><code class="prettyprint">dynamicDrop</code></a> setting to
+true so that the dropzones rects are recalculated after every <code class="prettyprint">dragmove</code>.</p>
+<h1 id='drag-handle'>Drag handle</h1><div class="highlight"><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+  A draggable item
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"handle"</span><span class="nt">&gt;</span> Handle <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="s1">'.item'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">draggable</span><span class="p">({</span>
+    <span class="na">allowFrom</span><span class="p">:</span> <span class="s1">'.handle'</span><span class="p">,</span>
+  <span class="p">});</span>
+</code></pre></div>
+<p>To make an element be the handle of a parent draggable, use the allowFrom
+setting option to allow an action to start only if the element matches a
+certain CSS selector or is a specific element.</p>
+<h1 id='prevent-actions-on-child'>Prevent actions on child</h1><div class="highlight"><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"resizable"</span><span class="nt">&gt;</span>
+  A resizable item
+  <span class="nt">&lt;textarea&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript"><code><span class="nx">interact</span><span class="p">(</span><span class="s1">'.item'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">draggable</span><span class="p">({</span>
+    <span class="c1">// don't drag from textarea elments</span>
+    <span class="na">ignoreFrom</span><span class="p">:</span> <span class="s1">'textarea'</span><span class="p">,</span>
+  <span class="p">});</span>
+</code></pre></div>
+<p>Use the <code class="prettyprint">ignoreFrom</code> option to prevent actions from starting if the pointer
+went down on an element matching the given selector or HTMLElement.</p>
+<h1 id='revertrestoreundo-drag-position'>Revert/restore/undo drag position</h1>
+<p>There&rsquo;s no direct API to revert a dragged element to it&rsquo;s position before the
+drag. To do this, you must store the position at <code class="prettyprint">dragstart</code> and change the
+element&rsquo;s style so that it returns to the start position on <code class="prettyprint">dragend</code>. You can
+use CSS transitions to animate change in position.</p>
+<h1 id='dragging-scrolls-instead'>Dragging scrolls instead</h1><div class="highlight"><pre class="highlight css"><code><span class="nc">.draggable</span><span class="o">,</span> <span class="nc">.resizable</span><span class="o">,</span> <span class="nc">.gesturable</span> <span class="p">{</span>
+  <span class="nl">-ms-touch-action</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="py">touch-action</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="py">user-select</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To allow touch interactions without scrolling or zooming, use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action"><code class="prettyprint">touch-action</code> CSS
+property</a>.</p>
+<h1 id='dragging-between-iframes'>Dragging between iFrames</h1>
+<p>There is <a href="https://github.com/taye/interact.js/pull/98">limited support</a> for using interact.js across iFrames. There are
+currently browser inconsistencies and other issues which have yet to be
+addressed.</p>
+
+
+
+        <div class="ad-padding"></div>
+
+      </main>
+    </div>
+
+    <script>
+      if (!/yes|1/.test(navigator.doNotTrack) || /MSIE|Trident/i.test(navigator.userAgent)) {
+      (function(p,r,i,v,a,c,y){p['GoogleAnalyticsObject']=a;p[a]=p[a]||function(){
+      (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
+      y=r.getElementsByTagName(i)[0];c.async=1;c.src=v;y.parentNode.insertBefore(c,y)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-44445883-3', 'interactjs.io');
+
+      window.addEventListener('DOMContentLoaded', function () {
+        var heading = document.getElementById(window.location.hash),
+            title = heading && heading.textContent;
+
+        if (title) {
+          ga('send', {
+            hitType: 'pageview',
+            page: '/docs/' + window.location.hash,
+            title: 'Docs: ' + title
+          });
+        }
+        else {
+          ga('send', 'pageview');
+        }
+      });
+    }
+    </script>
+
+  </body>
+</html>
